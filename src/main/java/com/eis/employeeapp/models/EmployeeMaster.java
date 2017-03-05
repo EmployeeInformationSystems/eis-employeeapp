@@ -42,6 +42,9 @@ public class EmployeeMaster {
 	
 	@OneToOne(cascade=CascadeType.ALL,mappedBy="employeeMaster")
 	private EmployeeDetails employeeDetails;
+	
+	@OneToOne(cascade=CascadeType.ALL,mappedBy="employeeMaster")
+	private Address address;
 
 	public int getEmpid() {
 		return empid;
@@ -85,5 +88,11 @@ public class EmployeeMaster {
 	}
 	public void setEmployeeDetails(EmployeeDetails employeeDetails) {
 		this.employeeDetails = employeeDetails;
+	}
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
 	} 
 }

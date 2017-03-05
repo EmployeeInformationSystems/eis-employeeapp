@@ -29,6 +29,16 @@ public class EmployeeDetails {
 	@NotNull
 	private int ssn;
 	
+	@Column(name="role")
+	@NotNull
+	private String role;
+	
+	@Column(name="dateOfJoining")
+	private String dateOfJoining;
+	
+	@Column(name="terminationDate")
+	private String terminationDate;
+		
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="emp_id")
 	private EmployeeMaster employeeMaster;
@@ -55,5 +65,29 @@ public class EmployeeDetails {
 
 	public void setSsn(int ssn) {
 		this.ssn = ssn;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public String getDateOfJoining() {
+		return dateOfJoining;
+	}
+
+	public void setDateOfJoining(String dateOfJoining) {
+		this.dateOfJoining = dateOfJoining;
+	}
+
+	public String getTerminationDate() {
+		return terminationDate;
+	}
+
+	public void setTerminationDate(String terminationDate) {
+		this.terminationDate = terminationDate;
 	}
 }
